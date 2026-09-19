@@ -1,15 +1,21 @@
 # Quality Workflow Plugin
 
-A multi-agent workflow plugin for automated code review, test generation, and quality assurance.
+A multi-agent workflow plugin for Claude Code that automates code review, test generation, and quality checks.
 
 ## Components
-- **Agents**: `reviewer` (read-only code analyzer) and `tester` (test builder/runner).
-- **Command**: `/workflow` — Orchestrates reviewer and tester agents sequentially and in parallel.
-- **Skill**: `quality-check` — Best practices for Express API endpoints.
-- **Hook**: Post-tool execution hook for running automated tests.
 
-## Installation
+- **Agents**:
+  - `reviewer`: Read-only agent that analyzes code for bugs and quality issues.
+  - `tester`: Agent that generates unit tests and runs `npm test`.
+- **Command**:
+  - `/workflow`: Executes a two-phase review and testing workflow.
+- **Skill**:
+  - `quality-check`: Guidelines for Express API quality and test standards.
+- **Hook**:
+  - Automatically runs tests on file edits.
+
+## Usage
+
 ```bash
-/plugin marketplace add .
-/plugin install quality-workflow
-```
+claude plugin marketplace add .
+claude plugin install quality-workflow
