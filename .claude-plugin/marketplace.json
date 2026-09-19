@@ -1,5 +1,10 @@
 {
-  "name": "quality-workflow",
-  "source": "./",
-  "description": "Multi-agent workflow plugin for code review, test generation, and quality enforcement."
+  "name": "claude-multi-agent-workflow",
+  "plugins": [
+    {
+      "name": "quality-workflow",
+      "source": "./",
+      "description": "Multi-agent workflow plugin for code review and testing."
+    }
+  ]
 }
